@@ -43,4 +43,6 @@ function mq($sql)
   return $deConn->query($sql);
 }
 
+
+
  

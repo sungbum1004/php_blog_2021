@@ -14,10 +14,24 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/webInit.php';
 </body>
 </html>
 
+<script>
+function checkid() {
+  var loginId = document.getElementById("uid").value;
+  if(loginId)
+  {
+    url = "check.php?loginId="+loginId;
+    window.open(url,"chkid","width=300,height=100");
+  } else {
+    alert("아이디를 입력하세요");
+  }
+}
+</script>
+
 <form action="doJoin.php">
   <div>
     <span>아이디 </span>
-    <input required placeholder="아이디를 입력해주세요." type="text" name="loginId"> 
+    <input required placeholder="아이디를 입력해주세요." type="text" name="loginId" id="uid">
+    <input type="button" value="중복검사" onclick="checkid();" /> 
   </div>
   <div>
     <span>비밀번호</span>

@@ -1,6 +1,7 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'] . '/webInit.php';
 
+$bno = $_GET['id'];
 $con_num = $_GET['con_num'];
 $name = $_GET['name'];
 $pw = $_GET['pw'];
@@ -10,8 +11,8 @@ $sql = "
 INSERT INTO reply
 con_num = '${con_num}',
 `name` = '${name}',
-pw = '${pw}'
-content = '${content}'
+pw = '${pw}',
+content = '${content}',
 regDate = NOW()
 ";
 

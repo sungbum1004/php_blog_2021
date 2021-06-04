@@ -17,7 +17,7 @@ $pageTitle = "게시물 리스트";
 
   <div>
   <?php if (isset($_SESSION['loginedMemberId'])) { 
-                echo "<h2>{$_SESSION['loginedMemberId']}님 환영합니다.</h2>";
+                echo "<h3>{$_SESSION['loginedMemberId']}님 환영합니다.</h3>";
                 ?>
                 <a href="../member/doLogout.php">로그아웃</a>
             
